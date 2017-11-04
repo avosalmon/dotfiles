@@ -1,0 +1,23 @@
+{
+    // Editor settings
+    "editor.renderWhitespace": "boundary",
+    "editor.renderControlCharacters": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+
+    "files.trimTrailingWhitespace": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "sublimeTextKeymap.promptV3Features": true,
+
+    // tslint
+    "tslint.autoFixOnSave": true,
+    "tslint.alwaysShowRuleFailuresAsWarnings": true,
+    "tslint.rulesDirectory": "./node_modules/codelyzer",
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+    // PHP IntelliSense
+    "php.suggest.basic": false,
+    "php.executablePath": "/usr/local/opt/php71/bin/php"
+}
