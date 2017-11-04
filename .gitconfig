@@ -1,0 +1,23 @@
+[user]
+	name = Ryuta Hamasaki
+	email = hamasaki@kurashicom.jp
+[color]
+	ui = true
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[alias]
+	co = checkout
+
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[push]
+	default = simple
