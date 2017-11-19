@@ -1,23 +1,24 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
-    // Editor settings
-    "editor.renderWhitespace": "boundary",
-    "editor.renderControlCharacters": true,
-    "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true,
+  "workbench.colorTheme": "Material Theme",
+  "workbench.iconTheme": "material-icon-theme",
 
-    "files.trimTrailingWhitespace": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "sublimeTextKeymap.promptV3Features": true,
+  "window.zoomLevel": 0,
+  "window.openFilesInNewWindow": "on",
 
-    // tslint
-    "tslint.autoFixOnSave": true,
-    "tslint.alwaysShowRuleFailuresAsWarnings": true,
-    "tslint.rulesDirectory": "./node_modules/codelyzer",
-    "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.renderWhitespace": "boundary",
+  "editor.renderControlCharacters": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "explorer.openEditors.visible": 0,
 
-    // PHP IntelliSense
-    "php.suggest.basic": false,
-    "php.executablePath": "/usr/local/opt/php71/bin/php"
+  "tslint.autoFixOnSave": true,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  "tslint.rulesDirectory": "./node_modules/codelyzer",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+
+  "sublimeTextKeymap.promptV3Features": true,
+  "php.suggest.basic": false
 }
