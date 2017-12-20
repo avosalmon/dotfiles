@@ -15,8 +15,8 @@ export ENHANCD_FILTER=ENHANCD_FILTER=fzy:fzf:peco
 zplug "yous/vanilli.sh"
 
 # Additional completion definitions for Zsh
-zplug "zsh-users/zsh-completions"
-zplug "felixr/docker-zsh-completion"
+zplug "zsh-users/zsh-completions", lazy:true
+zplug "felixr/docker-zsh-completion", lazy:true
 
 # Load the theme.
 zplug "yous/lime"
@@ -41,7 +41,7 @@ zplug "rupa/z", use:"*.sh"
 zplug "b4b4r07/enhancd", use:init.sh
 
 # This plugin adds many useful aliases and functions.
-zplug "plugins/git",   from:oh-my-zsh
+zplug "plugins/git",   from:oh-my-zsh, lazy:true
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
