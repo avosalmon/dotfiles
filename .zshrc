@@ -81,6 +81,25 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# Peco
+# http://wayohoo.com/unix/zsh-oh-my-zsh-peco-of-installation-procedure.html
+# http://qiita.com/uchiko/items/f6b1528d7362c9310da0
+function peco-select-history() {
+  local tac
+  if which tac > /dev/null; then
+      tac="tac"
+  else
+      tac="tail -r"
+  fi
+  BUFFER=$(\history -n 1 | \
+              eval $tac | \
+              peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
 # auto completion
 autoload -Uz compinit
 compinit
@@ -106,8 +125,13 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # alias
 alias ll="ls -laG"
-alias yarn='docker run -it --rm -v $PWD:/usr/src/app -v ~/.gitconfig:/root/.gitconfig -v ~/Library/Caches/Yarn:/usr/local/share/.cache/yarn -w /usr/src/app node:6.11 yarn'
+alias git='/usr/local/bin/git'
 alias composer='docker run -it --rm -v $PWD:/var/app/current -v ~/.composer/auth.json:/root/.composer/auth.json -v ~/.composer/cache:/root/.composer/cache oliverlundquist/php7:latest composer'
 alias commit='git status && npm run commit'
 alias up="docker-compose up -d"
 alias down="docker-compose down"
+
+lookup() {
+  whois "${1}" | grep "^Name Server" && dig "${1}" ANY +noall +answer | grep "^${1}"
+}
+
