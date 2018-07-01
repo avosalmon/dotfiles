@@ -18,11 +18,16 @@ zplug "yous/vanilli.sh"
 zplug "zsh-users/zsh-completions", lazy:true
 zplug "felixr/docker-zsh-completion", lazy:true
 
-# Load the theme.
-zplug "yous/lime"
-export LIME_SHOW_HOSTNAME=1
-export ZSH_THEME="lime"
-export LIME_DIR_DISPLAY_COMPONENTS=0
+# Load the Powerlevel9k theme
+if [[ ! -d ~/powerlevel9k ]];then
+  git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
+fi
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs newline)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+DISABLE_UPDATE_PROMPT=true
 
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
