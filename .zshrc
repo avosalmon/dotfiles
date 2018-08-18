@@ -122,9 +122,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-# use php cli with binary installed via brew
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-
 # composer binaries
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
