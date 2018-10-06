@@ -21,6 +21,11 @@ zplug "felixr/docker-zsh-completion", lazy:true
 # Load the Powerlevel9k theme
 if [[ ! -d ~/powerlevel9k ]];then
   git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
+  
+  # Install nerd-font
+  # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-nerd-fonts
+  brew tap caskroom/fonts
+  brew cask install font-hack-nerd-font
 fi
 source  ~/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -128,7 +133,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 # alias
 alias ll="ls -laG"
 alias git='/usr/local/bin/git'
-alias composer='docker run -it --rm -v $PWD:/var/app/current -v ~/.composer/auth.json:/root/.composer/auth.json -v ~/.composer/cache:/root/.composer/cache oliverlundquist/php7:latest composer'
+alias composer='docker run -it --rm -v $PWD:/var/app/current -v ~/.composer:/root/.composer oliverlundquist/php7:latest composer'
 alias commit='git status && npm run commit'
 alias up="docker-compose up -d"
 alias down="docker-compose down"
