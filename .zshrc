@@ -27,12 +27,12 @@ if [[ ! -d ~/powerlevel9k ]];then
   brew tap caskroom/fonts
   brew cask install font-hack-nerd-font
 fi
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs newline)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 DISABLE_UPDATE_PROMPT=true
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
 
 # Syntax highlighting bundle. zsh-syntax-highlighting must be loaded after
 # excuting compinit command and sourcing other plugins.
