@@ -21,7 +21,7 @@ zplug "felixr/docker-zsh-completion", lazy:true
 # Load the Powerlevel9k theme
 if [[ ! -d ~/powerlevel9k ]];then
   git clone https://github.com/bhilburn/powerlevel9k.git ~/powerlevel9k
-  
+
   # Install nerd-font
   # https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#option-4-install-nerd-fonts
   brew tap caskroom/fonts
@@ -122,6 +122,11 @@ setopt interactive_comments
 
 # some homebrew packages are installed in /usr/local/sbin
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH

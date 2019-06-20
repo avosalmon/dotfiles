@@ -3,7 +3,7 @@
   "workbench.colorTheme": "Material Theme",
   "workbench.iconTheme": "material-icon-theme",
 
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "window.openFilesInNewWindow": "on",
 
   "editor.renderWhitespace": "boundary",
