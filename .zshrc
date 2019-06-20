@@ -92,6 +92,7 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 # Peco
+# you need to install peco through `brew intall peco`
 # http://wayohoo.com/unix/zsh-oh-my-zsh-peco-of-installation-procedure.html
 # http://qiita.com/uchiko/items/f6b1528d7362c9310da0
 function peco-select-history() {
